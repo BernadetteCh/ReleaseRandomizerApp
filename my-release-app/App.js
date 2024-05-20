@@ -1,12 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { useEffect, useRef, useState } from 'react';
+import RenderHomepage from './components/RenderHomepage/RenderHomepage';
+import Confetti from './components/Confetti/Confetti';
 
 export default function App() {
+  const [animationStart, setAnimationStart] = useState(false);
+
+  const startAndStopAnimation = () => {
+    setAnimationStart((data) => !data);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <RenderHomepage startAndStopAnimation={startAndStopAnimation} />
+      <Confetti animation={animationStart} />
+    </SafeAreaView>
   );
 }
 
