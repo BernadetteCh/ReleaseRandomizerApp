@@ -1,6 +1,5 @@
-import React, { startTransition, useCallback } from 'react';
+import React from 'react';
 import ConfettiCannon from 'react-native-confetti-cannon';
-import { StyleSheet, Text, Pressable, View } from 'react-native';
 import { useRef, useEffect } from 'react';
 
 export default function Confetti({ animation }) {

@@ -1,6 +1,6 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
-import { useEffect, useRef, useState } from 'react';
-import RenderHomepage from './components/RenderHomepage/RenderHomepage';
+import { useState } from 'react';
+import RenderHomepage from './components/RenderHomepage/AnimatedHomepage';
 import Confetti from './components/Confetti/Confetti';
 
 export default function App() {

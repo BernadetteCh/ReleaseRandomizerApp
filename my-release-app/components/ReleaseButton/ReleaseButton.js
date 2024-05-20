@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, Pressable, Image, View } from 'react-native';
 import { chooseElementByRandom } from '../Randomizer/Randomizer';
 import { createTeam } from '../../create-team';
@@ -28,7 +28,7 @@ export default function ReleaseButton({
       onPress={!buttonClicked ? chooseTeamMember : undefined}
       disabled={buttonClicked}
     >
-      <Text style={styles.text}>Show chosen Dev !</Text>
+      <Text style={styles.text}>Start</Text>
     </Pressable>
   );
 }
@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   disabledButton: {
-    backgroundColor: 'grey', // Change the background color to grey when the button is disabled
+    backgroundColor: 'grey',
   },
 });
